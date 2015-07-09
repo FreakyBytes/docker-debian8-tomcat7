@@ -14,7 +14,7 @@ RUN apt-get -y update && \
         tomcat7
 
 # helper script
-ADD start-tomcat.sh /usr/bin/start-tomcat.sh
+COPY start-tomcat.sh /usr/bin/start-tomcat.sh
 RUN chmod +x /usr/bin/start-tomcat.sh
 
 ENTRYPOINT /usr/bin/start-tomcat.sh
